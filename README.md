@@ -36,7 +36,7 @@ Plugin de compatibilidade para servidores compatíveis com PocketMine-MP API 2.0
 
 ```yaml
 name: MeuPlugin
-version: 1.0.0
+version: 1.0.1
 main: main.lua
 language: lua
 api: 2.0.0
@@ -143,7 +143,15 @@ Isso **não é sandbox de segurança**. Código externo executado pelo processo 
 - O host Lua incluído é Linux x86_64. Outras arquiteturas precisam recompilar o C.
 - O Python depende de uma instalação de Python 3 no host.
 
-Inicie um servidor API 2.0.0 com apenas o plugin ponte e um dos exemplos. Verifique carregamento, evento de entrada, comando e scheduler. Remova o runtime Python/Lua deliberadamente para confirmar que um plugin incompatível gera erro sem derrubar os demais plugins.
+## Testes
+
+Teste unitário mínimo:
+
+```sh
+php tests/ManifestSafetyTest.php
+```
+
+Teste de integração: inicie um servidor API 2.0.0 com apenas o plugin ponte e um dos exemplos. Verifique carregamento, evento de entrada, comando e scheduler. Remova o runtime Python/Lua deliberadamente para confirmar que um plugin incompatível gera erro sem derrubar os demais plugins.
 
 ## Estrutura
 

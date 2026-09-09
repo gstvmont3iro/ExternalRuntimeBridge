@@ -6,6 +6,29 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase{
 
+    public function onLoad(){
+        $base = __DIR__;
+        $files = array(
+            $base . DIRECTORY_SEPARATOR . "ExternalPluginManager.php",
+            $base . DIRECTORY_SEPARATOR . "External" . DIRECTORY_SEPARATOR . "ExternalPluginLoader.php",
+            $base . DIRECTORY_SEPARATOR . "Lua" . DIRECTORY_SEPARATOR . "LuaPlugin.php",
+            $base . DIRECTORY_SEPARATOR . "Lua" . DIRECTORY_SEPARATOR . "LuaRuntime.php",
+            $base . DIRECTORY_SEPARATOR . "Lua" . DIRECTORY_SEPARATOR . "LuaTask.php",
+            $base . DIRECTORY_SEPARATOR . "Lua" . DIRECTORY_SEPARATOR . "LuaEventListener.php",
+            $base . DIRECTORY_SEPARATOR . "Lua" . DIRECTORY_SEPARATOR . "LuaEventExecutor.php",
+            $base . DIRECTORY_SEPARATOR . "Python" . DIRECTORY_SEPARATOR . "PythonPlugin.php",
+            $base . DIRECTORY_SEPARATOR . "Python" . DIRECTORY_SEPARATOR . "PythonRuntime.php",
+            $base . DIRECTORY_SEPARATOR . "Python" . DIRECTORY_SEPARATOR . "PythonTask.php",
+            $base . DIRECTORY_SEPARATOR . "Python" . DIRECTORY_SEPARATOR . "PythonEventListener.php",
+            $base . DIRECTORY_SEPARATOR . "Python" . DIRECTORY_SEPARATOR . "PythonEventExecutor.php"
+        );
+        foreach($files as $file){
+            if(is_file($file)){
+                require_once $file;
+            }
+        }
+    }
+
     /** @var ExternalPluginManager */
     private $manager;
 
