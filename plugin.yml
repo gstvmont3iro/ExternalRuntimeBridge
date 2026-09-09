@@ -1,0 +1,7 @@
+name: ExternalRuntimeBridge
+main: ExternalRuntimeBridge\Main
+version: 1.0.0
+api: 2.0.0
+author: gusta7w7
+description: "Persistent Lua/Python plugin runtime bridge for API 2.0.0 servers."
+load: POSTWORLD

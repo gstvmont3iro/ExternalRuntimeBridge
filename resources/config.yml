@@ -1,0 +1,15 @@
+# Directory containing external plugin folders.
+external-plugin-directory: "plugins/external"
+
+# Optional executable override for Lua.
+lua-executable: ""
+
+# Optional Python executable override.
+python-executable: ""
+
+# Optional Python bridge helper override.
+python-runtime-script: ""
+
+# Process bridge timeout can also be set through:
+# EXTERNAL_LUA_TIMEOUT_MS
+# EXTERNAL_PYTHON_TIMEOUT_MS

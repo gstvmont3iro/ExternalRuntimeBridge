@@ -1,0 +1,12 @@
+name: HelloLua
+version: 1.0.0
+main: main.lua
+language: lua
+api: 2.0.0
+author: Example Author
+description: "Example Lua external plugin."
+commands:
+  hello:
+    description: "Sends a greeting."
+    usage: "/hello"
+    aliases: ["hi"]

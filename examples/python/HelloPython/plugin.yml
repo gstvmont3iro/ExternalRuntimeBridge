@@ -1,0 +1,12 @@
+name: HelloPython
+version: 1.0.0
+main: main.py
+language: python
+api: 2.0.0
+author: Example Author
+description: "Example Python external plugin."
+commands:
+  hello:
+    description: "Sends a greeting."
+    usage: "/hello"
+    aliases: ["hi"]
