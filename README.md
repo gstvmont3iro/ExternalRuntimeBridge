@@ -143,15 +143,7 @@ Isso **não é sandbox de segurança**. Código externo executado pelo processo 
 - O host Lua incluído é Linux x86_64. Outras arquiteturas precisam recompilar o C.
 - O Python depende de uma instalação de Python 3 no host.
 
-## Testes
-
-Teste unitário mínimo:
-
-```sh
-php tests/ManifestSafetyTest.php
-```
-
-Teste de integração: inicie um servidor API 2.0.0 com apenas o plugin ponte e um dos exemplos. Verifique carregamento, evento de entrada, comando e scheduler. Remova o runtime Python/Lua deliberadamente para confirmar que um plugin incompatível gera erro sem derrubar os demais plugins.
+Inicie um servidor API 2.0.0 com apenas o plugin ponte e um dos exemplos. Verifique carregamento, evento de entrada, comando e scheduler. Remova o runtime Python/Lua deliberadamente para confirmar que um plugin incompatível gera erro sem derrubar os demais plugins.
 
 ## Estrutura
 
